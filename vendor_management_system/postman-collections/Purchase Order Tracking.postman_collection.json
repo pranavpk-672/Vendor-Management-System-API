@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "9122692e-6687-4dd3-90fc-98b8d8cbb59a",
+		"name": "Purchase Order Tracking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34714197"
+	},
+	"item": [
+		{
+			"name": "api/purchase_orders/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"po_number\": \"PO12385\",\r\n    \"vendor\": 4,\r\n    \"order_date\": \"2024-05-05T10:00:00\",\r\n    \"delivery_date\": \"2024-05-15T10:00:00\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"Product A\",\r\n            \"price\": 50,\r\n            \"quantity\": 10\r\n        },\r\n        {\r\n            \"name\": \"Product B\",\r\n            \"price\": 60,\r\n            \"quantity\": 5\r\n        }\r\n    ],\r\n    \"quantity\": 15,\r\n    \"status\": \"Pending\",\r\n    \"quality_rating\": null,\r\n    \"issue_date\": \"2024-05-05T10:00:00\",\r\n    \"acknowledgment_date\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/purchase_orders/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"po_number\": \"PO12345\",\r\n    \"vendor\": 1,\r\n    \"order_date\": \"2024-05-05T10:00:00\",\r\n    \"delivery_date\": \"2024-05-15T10:00:00\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"Product A\",\r\n            \"price\": 50,\r\n            \"quantity\": 10\r\n        },\r\n        {\r\n            \"name\": \"Product B\",\r\n            \"price\": 60,\r\n            \"quantity\": 5\r\n        }\r\n    ],\r\n    \"quantity\": 15,\r\n    \"status\": \"Pending\",\r\n    \"quality_rating\": null,\r\n    \"issue_date\": \"2024-05-05T10:00:00\",\r\n    \"acknowledgment_date\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/purchase_orders/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 12:29:36 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "335"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"po_number\": \"PO12345\",\n    \"order_date\": \"2024-05-05T10:00:00Z\",\n    \"delivery_date\": \"2024-05-15T10:00:00Z\",\n    \"items\": [\n        {\n            \"name\": \"Product A\",\n            \"price\": 50,\n            \"quantity\": 10\n        },\n        {\n            \"name\": \"Product B\",\n            \"price\": 60,\n            \"quantity\": 5\n        }\n    ],\n    \"quantity\": 15,\n    \"status\": \"Pending\",\n    \"quality_rating\": null,\n    \"issue_date\": \"2024-05-05T10:00:00Z\",\n    \"acknowledgment_date\": null,\n    \"vendor\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "api/purchase_orders/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders/?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/purchase_orders/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/purchase_orders/?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 12:31:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "387"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"po_number\": \"PO12345\",\n            \"order_date\": \"2024-05-05T10:00:00Z\",\n            \"delivery_date\": \"2024-05-15T10:00:00Z\",\n            \"items\": [\n                {\n                    \"name\": \"Product A\",\n                    \"price\": 50,\n                    \"quantity\": 10\n                },\n                {\n                    \"name\": \"Product B\",\n                    \"price\": 60,\n                    \"quantity\": 5\n                }\n            ],\n            \"quantity\": 15,\n            \"status\": \"Pending\",\n            \"quality_rating\": null,\n            \"issue_date\": \"2024-05-05T10:00:00Z\",\n            \"acknowledgment_date\": null,\n            \"vendor\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "api/purchase_orders/",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "api/purchase_orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/purchase_orders/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 12:39:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, OPTIONS, GET, PUT"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "335"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"po_number\": \"PO12345\",\n    \"order_date\": \"2024-05-05T10:00:00Z\",\n    \"delivery_date\": \"2024-05-15T10:00:00Z\",\n    \"items\": [\n        {\n            \"name\": \"Product A\",\n            \"price\": 50,\n            \"quantity\": 10\n        },\n        {\n            \"name\": \"Product B\",\n            \"price\": 60,\n            \"quantity\": 5\n        }\n    ],\n    \"quantity\": 15,\n    \"status\": \"Pending\",\n    \"quality_rating\": null,\n    \"issue_date\": \"2024-05-05T10:00:00Z\",\n    \"acknowledgment_date\": null,\n    \"vendor\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "api/purchase_orders",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "api/purchase_orders",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"po_number\": \"PO12345\",\r\n    \"vendor\": 1,  // Assuming vendor ID 1 exists in your database\r\n    \"order_date\": \"2024-05-06T10:00:00\",\r\n    \"delivery_date\": \"2024-05-16T10:00:00\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"Updated Product A\",\r\n            \"price\": 55,\r\n            \"quantity\": 12\r\n        },\r\n        {\r\n            \"name\": \"Updated Product B\",\r\n            \"price\": 65,\r\n            \"quantity\": 7\r\n        }\r\n    ],\r\n    \"quantity\": 19,\r\n    \"status\": \"In Progress\",\r\n    \"quality_rating\": 4.5,\r\n    \"issue_date\": \"2024-05-06T10:00:00\",\r\n    \"acknowledgment_date\": \"2024-05-10T10:00:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/purchase_orders/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 12:42:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, OPTIONS, GET, PUT"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "372"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"po_number\": \"PO12345\",\n    \"order_date\": \"2024-05-06T10:00:00Z\",\n    \"delivery_date\": \"2024-05-16T10:00:00Z\",\n    \"items\": [\n        {\n            \"name\": \"Updated Product A\",\n            \"price\": 55,\n            \"quantity\": 12\n        },\n        {\n            \"name\": \"Updated Product B\",\n            \"price\": 65,\n            \"quantity\": 7\n        }\n    ],\n    \"quantity\": 19,\n    \"status\": \"In Progress\",\n    \"quality_rating\": 4.5,\n    \"issue_date\": \"2024-05-06T10:00:00Z\",\n    \"acknowledgment_date\": \"2024-05-10T10:00:00Z\",\n    \"vendor\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "api/purchase_orders/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/purchase_orders",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/purchase_orders/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"purchase_orders",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 12:47:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, PUT, DELETE, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

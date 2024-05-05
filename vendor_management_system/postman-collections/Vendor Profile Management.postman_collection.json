@@ -1,0 +1,465 @@
+{
+	"info": {
+		"_postman_id": "610c2242-9361-4d75-b551-68395abba19f",
+		"name": "Vendor Profile Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34714197"
+	},
+	"item": [
+		{
+			"name": "api/vendors/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sample Vendor\",\r\n  \"contact_details\": \"vendor@example.com\",\r\n  \"address\": \"123 Sample St, Sample City\",\r\n  \"vendor_code\": \"VEND125\",\r\n  \"on_time_delivery_rate\": 95.5,\r\n  \"quality_rating_avg\": 4.2,\r\n  \"average_response_time\": 24.5,\r\n  \"fulfillment_rate\": 98.3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/vendors/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Sample Vendor\",\r\n  \"contact_details\": \"vendor@example.com\",\r\n  \"address\": \"123 Sample St, Sample City\",\r\n  \"vendor_code\": \"VEND125\",\r\n  \"on_time_delivery_rate\": 95.5,\r\n  \"quality_rating_avg\": 4.2,\r\n  \"average_response_time\": 24.5,\r\n  \"fulfillment_rate\": 98.3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vendors/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 11:48:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "240"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"name\": \"Sample Vendor\",\n    \"contact_details\": \"vendor@example.com\",\n    \"address\": \"123 Sample St, Sample City\",\n    \"vendor_code\": \"VEND125\",\n    \"on_time_delivery_rate\": 95.5,\n    \"quality_rating_avg\": 4.2,\n    \"average_response_time\": 24.5,\n    \"fulfillment_rate\": 98.3\n}"
+				}
+			]
+		},
+		{
+			"name": "api/vendors/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/vendors/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vendors/?page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 11:51:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "774"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 3,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"name\": \"Sample Vendor\",\n            \"contact_details\": \"vendor@example.com\",\n            \"address\": \"123 Sample St, Sample City\",\n            \"vendor_code\": \"VEND123\",\n            \"on_time_delivery_rate\": 95.5,\n            \"quality_rating_avg\": 4.2,\n            \"average_response_time\": 24.5,\n            \"fulfillment_rate\": 98.3\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Sample Vendor\",\n            \"contact_details\": \"vendor@example.com\",\n            \"address\": \"123 Sample St, Sample City\",\n            \"vendor_code\": \"VEND124\",\n            \"on_time_delivery_rate\": 95.5,\n            \"quality_rating_avg\": 4.2,\n            \"average_response_time\": 24.5,\n            \"fulfillment_rate\": 98.3\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Sample Vendor\",\n            \"contact_details\": \"vendor@example.com\",\n            \"address\": \"123 Sample St, Sample City\",\n            \"vendor_code\": \"VEND125\",\n            \"on_time_delivery_rate\": 95.5,\n            \"quality_rating_avg\": 4.2,\n            \"average_response_time\": 24.5,\n            \"fulfillment_rate\": 98.3\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "api/vendors/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/vendors/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vendors/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 11:54:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, OPTIONS, DELETE"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "240"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Sample Vendor\",\n    \"contact_details\": \"vendor@example.com\",\n    \"address\": \"123 Sample St, Sample City\",\n    \"vendor_code\": \"VEND123\",\n    \"on_time_delivery_rate\": 95.5,\n    \"quality_rating_avg\": 4.2,\n    \"average_response_time\": 24.5,\n    \"fulfillment_rate\": 98.3\n}"
+				}
+			]
+		},
+		{
+			"name": "api/vendors/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sample Vendor 11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/vendors/",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Sample Vendor 11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/vendors/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vendors",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 11:59:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "PUT, OPTIONS, DELETE, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "243"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Sample Vendor 11\",\n    \"contact_details\": \"vendor@example.com\",\n    \"address\": \"123 Sample St, Sample City\",\n    \"vendor_code\": \"VEND123\",\n    \"on_time_delivery_rate\": 95.5,\n    \"quality_rating_avg\": 4.2,\n    \"average_response_time\": 24.5,\n    \"fulfillment_rate\": 98.3\n}"
+				}
+			]
+		},
+		{
+			"name": "api/vendors/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000//api/vendors/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"",
+						"api",
+						"vendors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
